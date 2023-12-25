@@ -1,0 +1,15 @@
+
+type Query {
+	bankAccount(id:ID):BankAccount
+}
+
+type BankAccount{
+ id: String!
+ name: String!
+ currency: Currency
+}
+
+enum Currency {
+ USD
+ INR
+}
