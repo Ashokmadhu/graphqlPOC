@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 public class BankAccountResolver implements GraphQLQueryResolver {
 	
-	private BankAccount getBankAccount(String id) {
+	public BankAccount bankAccount(String id) {
 		log.info("BankAccount resolver id : {}" ,id );
 		return BankAccount.builder().id("1").name("Ashok").currency(Currency.USD).build();
 		
