@@ -1,4 +1,4 @@
-package com.nissan.pace.poc.domain;
+package com.learning.pace.poc.domain;
 
 public enum Currency {
 	

@@ -1,4 +1,4 @@
-package com.nissan.pace.poc.service;
+package com.learning.pace.poc.service;
 
 public interface BankAccountService {
 

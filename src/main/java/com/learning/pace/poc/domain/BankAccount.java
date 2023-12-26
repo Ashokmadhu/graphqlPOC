@@ -1,4 +1,4 @@
-package com.nissan.pace.poc.domain;
+package com.learning.pace.poc.domain;
 
 import lombok.Builder;
 import lombok.Data;

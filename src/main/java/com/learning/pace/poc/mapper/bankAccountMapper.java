@@ -1,4 +1,4 @@
-package com.nissan.pace.poc.mapper;
+package com.learning.pace.poc.mapper;
 
 import org.mapstruct.Mapper;
 

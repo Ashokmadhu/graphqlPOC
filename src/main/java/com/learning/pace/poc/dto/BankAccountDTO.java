@@ -1,4 +1,4 @@
-package com.nissan.pace.poc.dto;
+package com.learning.pace.poc.dto;
 
 import java.io.Serializable;
 

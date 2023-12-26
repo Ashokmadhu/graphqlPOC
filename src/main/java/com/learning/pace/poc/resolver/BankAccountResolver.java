@@ -1,9 +1,9 @@
-package com.nissan.pace.poc.resolver;
+package com.learning.pace.poc.resolver;
 
 import org.springframework.stereotype.Component;
 
-import com.nissan.pace.poc.domain.BankAccount;
-import com.nissan.pace.poc.domain.Currency;
+import com.learning.pace.poc.domain.BankAccount;
+import com.learning.pace.poc.domain.Currency;
 
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import lombok.extern.slf4j.Slf4j;
