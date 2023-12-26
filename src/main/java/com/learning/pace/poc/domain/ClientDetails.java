@@ -10,11 +10,9 @@ import lombok.Data;
 @Data
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class BankAccount implements Serializable {
-
-	private static final long serialVersionUID = -1628606063163380791L;
-	private String id;
-	private ClientDetails clientDetails;
-	private Currency currency;
+public class ClientDetails implements Serializable {
+	private static final long serialVersionUID = 849458658074979569L;
+	private String firstName;
+	private String lastName;
 
 }

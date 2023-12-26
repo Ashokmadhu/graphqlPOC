@@ -1,5 +1,5 @@
 type BankAccount{
  id: String!
- name: String!
+ clientDetails: ClientDetails!
  currency: Currency
 }

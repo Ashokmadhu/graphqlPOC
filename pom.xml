@@ -37,13 +37,24 @@
 			<version>15.0.0</version>
 		</dependency>
 
-		<!-- <dependency> <groupId>com.graphql-java-kickstart</groupId> <artifactId>playground-spring-boot-starter</artifactId> 
-			<version>11.1.0</version> </dependency> -->
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>voyager-spring-boot-starter</artifactId>
+			<version>11.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>playground-spring-boot-starter</artifactId>
+			<version>11.1.0</version>
+		</dependency>
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphql-java-tools</artifactId>
 			<version>13.1.0</version>
 		</dependency>
+
+		<!-- End for graphql -->
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>

@@ -1,8 +1,9 @@
 package com.learning.pace.poc.serviceimpl;
 
-import org.springframework.stereotype.Service;
 
-@Service
-public class BankAccountServiceImpl {
+import com.learning.pace.poc.service.BankAccountService;
+
+
+public class BankAccountServiceImpl implements BankAccountService {
 
 }
