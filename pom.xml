@@ -76,13 +76,6 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>1</version>
-		</dependency>
-
-
 	</dependencies>
 
 	<build>
@@ -114,7 +107,7 @@
 					<processors>
 						<processor>org.mapstruct.ap.MappingProcessor</processor>
 					</processors>
-					<sourceDirectory>src/main/java/com/nissan/pace/graphql</sourceDirectory>
+					<sourceDirectory>src/main/java/com/learning/pace/poc</sourceDirectory>
 				</configuration>
 				<executions>
 					<execution>

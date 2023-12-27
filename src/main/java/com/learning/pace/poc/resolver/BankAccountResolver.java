@@ -1,9 +1,12 @@
 package com.learning.pace.poc.resolver;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.learning.pace.poc.domain.BankAccount;
-import com.learning.pace.poc.domain.Currency;
+import com.learning.pace.poc.dto.BankAccountDTO;
+import com.learning.pace.poc.entity.BankAccount;
+import com.learning.pace.poc.mapper.BankAccountMapper;
+import com.learning.pace.poc.service.BankAccountService;
 
 import graphql.execution.DataFetcherResult;
 import graphql.kickstart.execution.error.GenericGraphQLError;
@@ -14,15 +17,18 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 public class BankAccountResolver implements GraphQLQueryResolver {
 
-	public DataFetcherResult<BankAccount> bankAccount(String id) {
+	@Autowired
+	private BankAccountService bankAccountService;
 
-		/*
-		 * Data fetecher 1. call multiple services 2.call another graphql server 3.call
-		 * service that returns partial responses
-		 */
+	@Autowired
+	private BankAccountMapper mapper;
+
+	public DataFetcherResult<BankAccountDTO> bankAccount(String id) {
+
+		BankAccount account = bankAccountService.findAccountByID(id);
+		BankAccountDTO responseDTO = mapper.convertBankAccountEntityToDTO(account);
 		log.info("Fetching data from bank account resolver : {}", id);
-		return DataFetcherResult.<BankAccount>newResult()
-				.data(BankAccount.builder().id("1").currency(Currency.INR).build())
+		return DataFetcherResult.<BankAccountDTO>newResult().data(responseDTO)
 				.error(new GenericGraphQLError("Error while calling another service")).build();
 
 	}

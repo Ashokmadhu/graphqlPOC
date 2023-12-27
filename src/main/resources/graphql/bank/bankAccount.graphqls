@@ -1,5 +1,11 @@
 type BankAccount{
  id: String!
  clientDetails: ClientDetails
- currency: Currency
+ currency: String!
+}
+
+type BankAccountDTO {
+  id: ID!
+  clientDetails: ClientDetailsDTO
+  currency: String!
 }

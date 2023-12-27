@@ -3,3 +3,9 @@ firstName: String!
 lastName: String!
 address: Address!
 }
+
+type ClientDetailsDTO {
+  firstName: String!
+  lastName: String!
+  address : AddressDTO
+}

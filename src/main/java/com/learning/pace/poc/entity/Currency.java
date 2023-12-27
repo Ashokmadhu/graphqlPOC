@@ -1,4 +1,4 @@
-package com.learning.pace.poc.domain;
+package com.learning.pace.poc.entity;
 
 public enum Currency {
 	

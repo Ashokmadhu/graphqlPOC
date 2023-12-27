@@ -1,0 +1,15 @@
+input BankAccountInput {
+	clientDetails: ClientDetailsInput
+	currency: String!
+}
+
+input ClientDetailsInput{
+  firstName: String !
+  lastName: String !
+  address: AddressInput!
+}
+
+input AddressInput {
+ permanentAddress: String!
+ temporaryAddress: String!
+}
