@@ -1,6 +1,7 @@
 package com.learning.pace.poc.resolver;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,9 @@ import com.learning.pace.poc.service.BankAccountService;
 
 import graphql.execution.DataFetcherResult;
 import graphql.kickstart.tools.GraphQLQueryResolver;
+import graphql.schema.DataFetchingEnvironment;
+import graphql.schema.DataFetchingFieldSelectionSet;
+import graphql.schema.SelectedField;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -35,8 +39,14 @@ public class BankAccountResolver implements GraphQLQueryResolver {
 
 	}
 
-	public List<BankAccountDTO> fetchAllBankAccounts() {
+	public List<BankAccountDTO> fetchAllBankAccounts(DataFetchingEnvironment env) {
 		log.info("Fetching all datas from bank account resolver");
+	    env.getSelectionSet().getFields().stream().map(e -> e.getName()).forEach(e ->{
+	    	log.info("Printing fields in selection set" ,e );
+		});
+	    
+	    env.getSelectionSet().getFields().stream().map(SelectedField::getName).collect(Collectors.toList());
+	    
 		List<BankAccount> responseList = bankAccountService.fetchAllBankAccounts();
 		List<BankAccountDTO> responseDTO = mapper.convertListBankAccountEntityToDTO(responseList);
 		return responseDTO;

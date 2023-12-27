@@ -37,6 +37,7 @@ mutation {
     clientDetails: {
       firstName: "Ashok",
       lastName: "Kumar",
+      age :32
       address: {
         permanentAddress: "123 Main St",
         temporaryAddress: "456 Temp St"
@@ -54,11 +55,13 @@ mutation {
         permanentAddress
       }
     }
-    # Include any other fields you want to retrieve in the response
   }
 }
 
+
+
 #For quering the saved data in db sample query
+
 query{
   bankAccount(id:"658c34c62c694e281ddc7b8f"){
     currency
@@ -92,6 +95,23 @@ This project needs Java 17 , maven , Mongo DB , Mongo DB Compass to be set up in
 All nested objects will be retrieved in single thread . To overcome that we can use Executorservice . Sample has been given in the Address and Client resolver classes.
 
 Data fetcher will return objects with errors . Sample code has been given in the bank account mutation class.
+
+# DataFetchingEnvironment
+
+This is the interface in which we can pass it to any method and we can get the list of selected set from UI and we can debug .
+For example I have used the same in BankAccountResolver class in fetchAllBankAccounts method.
+ 
+It has containsAnyOf method and containsAllOf methods . These will be useful when we filter and check with fields condition
+
+#Scalars in GraphQL
+
+We can use many of datatypes using this scalar. We need to add a dependency and we can write our own scalar.
+Scalar is basically a last node in the tree. 
+For accessing scalar types you can see all the scalar types in ExtendedScalars java class
+
+#Bean Validation
+
+Here bean validation is normal as others.
 
 
 

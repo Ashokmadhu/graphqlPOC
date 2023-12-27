@@ -1,11 +1,13 @@
 type ClientDetails{
 firstName: String!
 lastName: String!
+age:NonNegativeInt!
 address: Address!
 }
 
 type ClientDetailsDTO {
   firstName: String!
   lastName: String!
+  age:NonNegativeInt!
   address : AddressDTO
 }

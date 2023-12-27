@@ -6,6 +6,7 @@ input BankAccountInput {
 input ClientDetailsInput{
   firstName: String !
   lastName: String !
+  age:NonNegativeInt!
   address: AddressInput!
 }
 

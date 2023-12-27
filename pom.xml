@@ -54,6 +54,13 @@
 			<version>13.1.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-java-extended-scalars</artifactId>
+			<version>21.0</version>
+		</dependency>
+
+
 		<!-- End for graphql -->
 
 		<dependency>
@@ -75,6 +82,18 @@
 			<version>${org.mapstruct.version}</version> <!-- Use the same version as mapstruct -->
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- MapStruct ends -->
+
+		<!-- Used as bean Validator -->
+
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+
+		<!-- Used as bean Validator ends -->
+
 
 	</dependencies>
 
