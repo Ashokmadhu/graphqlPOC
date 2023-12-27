@@ -1,5 +1,6 @@
 package com.learning.pace.poc.serviceimpl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,11 @@ public class BankAccountServiceImpl implements BankAccountService {
 	public BankAccount findAccountByID(String id) {
 		Optional<BankAccount> response = accountRepository.findById(id);
 		return response.get();
+	}
+
+	@Override
+	public List<BankAccount> fetchAllBankAccounts() {
+		return accountRepository.findAll();
 	}
 
 }

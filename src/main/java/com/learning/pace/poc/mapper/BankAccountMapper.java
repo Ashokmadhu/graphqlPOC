@@ -1,5 +1,7 @@
 package com.learning.pace.poc.mapper;
 
+import java.util.List;
+
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -25,5 +27,7 @@ public interface BankAccountMapper {
 	BankAccountDTO convertBankAccountEntityToDTO(BankAccount account);
 
 	AddressDTO convertAddressEntityToDTO(Address address);
+
+	List<BankAccountDTO> convertListBankAccountEntityToDTO(List<BankAccount> responseList);
 
 }

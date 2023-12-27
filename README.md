@@ -72,7 +72,22 @@ query{
   }
 }
 
+# find all bank accounts sample query 
+
+query {
+  fetchAllBankAccounts {
+    id
+    clientDetails {
+      firstName
+      lastName
+    }
+    currency
+  }
+}
+
 #Notes 
+
+This project needs Java 17 , maven , Mongo DB , Mongo DB Compass to be set up in the local machine.
 
 All nested objects will be retrieved in single thread . To overcome that we can use Executorservice . Sample has been given in the Address and Client resolver classes.
 
