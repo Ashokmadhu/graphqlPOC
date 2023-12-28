@@ -1,0 +1,10 @@
+
+fragment ClientDetailsFragment on ClientDetailsDTO {
+  firstName
+  lastName
+  age
+  address{
+  permanentAddress
+  temporaryAddress
+  }
+}
